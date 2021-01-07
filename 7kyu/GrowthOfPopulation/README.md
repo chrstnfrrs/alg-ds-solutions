@@ -33,4 +33,4 @@ Note: Don't forget to convert the percent parameter as a percentage in the body 
 
 ## Kata
 
-(Link to Kata)[https://www.codewars.com/kata/563b662a59afc2b5120000c6]
+[Link to Kata](https://www.codewars.com/kata/563b662a59afc2b5120000c6)

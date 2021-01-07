@@ -16,4 +16,4 @@ The input string can be of arbitrary length - in particular, it may be empty. Al
 
 ## Kata
 
-(Link to Kata)[https://www.codewars.com/kata/5556282156230d0e5e000089]
+[Link to Kata](https://www.codewars.com/kata/5556282156230d0e5e000089)
