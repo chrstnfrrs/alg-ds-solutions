@@ -13,3 +13,7 @@ For example:
 ```
 
 The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of `'G'`, `'C'`, `'A'` and/or `'T'`.
+
+## Kata
+
+(Link to Kata)[https://www.codewars.com/kata/5556282156230d0e5e000089]
