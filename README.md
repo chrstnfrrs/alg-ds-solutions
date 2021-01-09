@@ -7,3 +7,5 @@
 This repo is used to track Kata solutions I have already completed. As of now I am training in the following languages:
 * JavaScript
 * Go
+
+[My Codewars Profile](https://www.codewars.com/users/chrstnfrrs)
