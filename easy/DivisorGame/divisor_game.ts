@@ -1,1 +1,1 @@
-const divisorGameTs = (n: number): boolean => n % 2 === 0
+const divisorGameTs = (n: number): boolean => n % 2 === 0;

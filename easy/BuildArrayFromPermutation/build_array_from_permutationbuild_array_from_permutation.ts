@@ -1,1 +1,2 @@
-const buildArray = (nums: number[]): number[] => nums.map((item: number) => nums[item]);
+const buildArray = (nums: number[]): number[] =>
+  nums.map((item: number) => nums[item]);

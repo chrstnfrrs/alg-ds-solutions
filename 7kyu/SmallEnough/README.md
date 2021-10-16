@@ -5,4 +5,5 @@ You will be given an array and a limit value. You must check that all values in 
 You can assume all values in the array are numbers.
 
 ## Kata
+
 [Link to Kata](https://www.codewars.com/kata/57cc981a58da9e302a000214)

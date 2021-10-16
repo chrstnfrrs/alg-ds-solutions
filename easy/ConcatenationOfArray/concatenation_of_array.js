@@ -1,1 +1,1 @@
-const getConcatenation = (nums) => [...nums, ...nums]
+const getConcatenation = (nums) => [...nums, ...nums];

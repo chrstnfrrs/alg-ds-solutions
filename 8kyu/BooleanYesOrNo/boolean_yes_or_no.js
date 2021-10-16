@@ -1,1 +1,1 @@
-const boolToWord = (b) => b ? 'Yes' : 'No'
+const boolToWord = (b) => (b ? "Yes" : "No");

@@ -1,6 +1,6 @@
-import Chance from 'chance';
+import Chance from "chance";
 
-import { serialize } from './serialize';
+import { serialize } from "./serialize";
 
 const chance = new Chance();
 
@@ -10,11 +10,11 @@ const getNumberActual = (input: number): string => `${input}`;
 const getArrayActual = (input: (string | number)[]): string => {
   const arrAsString = input
     .map((value: number | string) =>
-      typeof value === 'string'
+      typeof value === "string"
         ? getStringActual(value as string)
-        : getNumberActual(value as number),
+        : getNumberActual(value as number)
     )
-    .join(', ') as string;
+    .join(", ") as string;
 
   return `[${arrAsString}]`;
 };
@@ -25,10 +25,10 @@ const createRandomArr = () => {
     .map((_, index) => (index % 2 === 0 ? chance.natural() : chance.string()));
 };
 
-describe('Given a serialize function', () => {
+describe("Given a serialize function", () => {
   let result: string, actual: string;
 
-  describe('When the serialize function is given a number', () => {
+  describe("When the serialize function is given a number", () => {
     beforeEach(() => {
       const input = chance.natural({
         max: 99,
@@ -38,22 +38,22 @@ describe('Given a serialize function', () => {
       actual = getNumberActual(input);
       result = serialize(input) as string;
     });
-    test('should return the number as string', () => {
+    test("should return the number as string", () => {
       expect(result).toStrictEqual(actual);
     });
   });
-  describe('When the serialize function is given a string', () => {
+  describe("When the serialize function is given a string", () => {
     beforeEach(() => {
       const input = chance.string();
 
       actual = getStringActual(input);
       result = serialize(input) as string;
     });
-    test('should return the string', () => {
+    test("should return the string", () => {
       expect(result).toStrictEqual(actual);
     });
   });
-  describe('When the serialize function is given an array', () => {
+  describe("When the serialize function is given an array", () => {
     beforeEach(() => {
       const stringArr = chance.n(chance.string, chance.d4());
       const numberArr = chance.n(chance.natural, chance.d4());
@@ -67,30 +67,32 @@ describe('Given a serialize function', () => {
 
         if (Array.isArray(value)) {
           currentValue = getArrayActual(value as (string | number)[]);
-        } else if (typeof value === 'string') {
+        } else if (typeof value === "string") {
           currentValue = getStringActual(value as string);
         } else {
           currentValue = getNumberActual(value);
         }
 
         if (acc.length) {
-          return (Object.keys(input).length - 1 === index
-            ? `${acc} ${currentValue}`
-            : `${acc} ${currentValue},`) as string;
+          return (
+            Object.keys(input).length - 1 === index
+              ? `${acc} ${currentValue}`
+              : `${acc} ${currentValue},`
+          ) as string;
         }
 
         return Object.keys(input).length - 1 === index
           ? currentValue
           : (`${currentValue},` as string);
-      }, '');
+      }, "");
 
       actual = `[${actualIndices}]`;
     });
-    test('should return the string', () => {
+    test("should return the string", () => {
       expect(result).toStrictEqual(actual);
     });
   });
-  describe('When the serialize function is given an object', () => {
+  describe("When the serialize function is given an object", () => {
     beforeEach(() => {
       const stringKey = chance.string();
       const numberKey = chance.string();
@@ -121,9 +123,9 @@ describe('Given a serialize function', () => {
 
         if (Array.isArray(currentInput)) {
           currentValue = getArrayActual(currentInput);
-        } else if (typeof currentInput === 'string') {
+        } else if (typeof currentInput === "string") {
           currentValue = getStringActual(currentInput);
-        } else if (typeof currentInput === 'number') {
+        } else if (typeof currentInput === "number") {
           currentValue = getNumberActual(currentInput);
         } else {
           currentValue = getStringActual(currentInput);
@@ -138,11 +140,11 @@ describe('Given a serialize function', () => {
         return Object.keys(input).length - 1 === index
           ? `"${key}": ${currentValue}`
           : `"${key}": ${currentValue},`;
-      }, '');
+      }, "");
 
       actual = `{${actualKeys}}`;
     });
-    test('should return the string', () => {
+    test("should return the string", () => {
       expect(result).toStrictEqual(actual);
     });
   });

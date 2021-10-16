@@ -14,4 +14,5 @@ rgb(148, 0, 211) // returns 9400D3
 ```
 
 ## Kata
+
 [Link to Kata](https://www.codewars.com/kata/513e08acc600c94f01000001)

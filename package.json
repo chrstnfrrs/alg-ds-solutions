@@ -1,7 +1,17 @@
 {
+  "scripts": {
+    "prettier": "prettier --write --ignore-unknown ."
+  },
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "chance": "^1.1.7",
     "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "@vercel/git-hooks": "^1.0.0",
+    "prettier": "^2.4.1"
+  },
+  "git": {
+    "pre-commit": "prettier"
   }
 }

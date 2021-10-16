@@ -11,4 +11,5 @@ NOTE: All numbers will be whole numbers greater than 0.
 If you liked this kata, check out part 2!!
 
 ## Link to Kata
+
 [Link to Kata](https://www.codewars.com/kata/5842df8ccbd22792a4000245/)
